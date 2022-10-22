@@ -1,0 +1,66 @@
+version: "3.8"
+
+volumes:
+  stt:
+  tts:
+  ai:
+  gui:
+
+networks:
+  quart_network:
+
+services:
+
+  # STT
+  stt-service:
+    container_name: stt-service-c
+    networks:
+      quart_network:
+    build:
+      context: ./stt
+    ports:
+      - "5001:5001"
+    volumes:
+      - stt:/stt
+    restart: always
+
+  # AI
+  ai-service:
+    container_name: ai-service-c
+    networks:
+      quart_network:
+    build:
+      context: ./ai
+    ports:
+      - "5002:5002"
+    volumes:
+      - ai:/ai
+    restart: always
+
+  # TTS
+  tts-service:
+    container_name: tts-service-c
+    networks:
+      quart_network:
+    build:
+      context: ./tts
+    ports:
+      - "5003:5003"
+    volumes:
+      - tts:/tts
+    restart: always
+
+  # GUI
+  gui-service:
+    container_name: gui-service-c
+    networks:
+      quart_network:
+    build:
+      context: ./gui
+    devices:
+      - /dev/snd:/dev/snd
+    user: qtuser
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+
+#    restart: always

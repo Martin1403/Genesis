@@ -1,0 +1,16 @@
+certifi==2022.6.15
+charset-normalizer==2.1.0
+deepspeech-tflite==0.9.3
+halo==0.0.31
+idna==3.3
+log-symbols==0.0.14
+numpy==1.23.1
+PyAudio==0.2.12
+pydub==0.25.1
+requests==2.28.1
+scipy==1.9.0
+six==1.16.0
+spinners==0.0.24
+termcolor==1.1.0
+urllib3==1.26.11
+webrtcvad==2.0.10
