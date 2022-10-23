@@ -81,4 +81,3 @@ python -m doctest --option ELLIPSIS --verbose notes/code.rst
 - [Link](https://stackoverflow.com/questions/45700653/can-my-docker-container-app-access-the-hosts-microphone-and-speaker-mac-wind) Microphone in docker container
 - [Link](https://askubuntu.com/questions/138611/how-to-change-audio-bit-depth-and-sampling-rate) Pulseaudio settings (sample rate, channels)
 - [Link](https://stackoverflow.com/questions/34496882/get-docker-container-id-from-container-name) Docker container id from name 
-- 

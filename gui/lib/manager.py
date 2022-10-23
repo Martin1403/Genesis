@@ -73,4 +73,5 @@ class VadManager(QThread):
                 text = f"USER: {user_text}\nAI: {ai_text}"
             else:
                 spinner.stop()
+                print(f"REC: {model.transcribe(wav_data)}")
                 wav_data = bytearray()
