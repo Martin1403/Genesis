@@ -3,6 +3,7 @@ from quart import Quart
 from quart_schema import QuartSchema
 
 
+
 # APP SETTINGS
 app = Quart(__name__)
 QuartSchema(app, title="Ai APP", version="0.0.1")
